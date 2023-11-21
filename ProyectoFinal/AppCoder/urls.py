@@ -1,11 +1,12 @@
 from django.urls import path
 from django.http import HttpResponse
-
-def view_inicio(request):
-    return HttpResponse("Bienvenidos!")
+from django.shortcuts import render
 
 def view_cursos(request):
-    return HttpResponse("aqui voy a mostrar mis cursos")
+    return render(request,"AppCoder/padre.html")
+
+def view_inicio(xx):
+    return HttpResponse("bienvenidos!!!!!!!!!!!!!")
 
 urlpatterns = [
     path('inicio/',view_inicio),
